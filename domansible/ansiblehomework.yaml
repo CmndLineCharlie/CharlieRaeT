@@ -1,0 +1,19 @@
+---
+
+- name: Ansible HW Playbook 
+  gather_facts: false
+  hosts: all
+  tasks:
+
+    - name: copy NIC file to opt directory and rename HOMEWORK
+      copy:
+        src: /etc/sysconfig/network-scripts/ifcfg-ens192 
+        dest: /opt/HOMEWORK
+        owner: root
+        group: root
+
+    - name: archive and compress /var/log/secure into /var/log/secure.tar.gz
+      archive:
+        path: /var/log/secure
+        dest: /var/log/secure.tar.gz
+        format: gz
