@@ -1,0 +1,11 @@
+---
+
+- name: My First playbook 
+  gather_facts: false
+  hosts: linux
+  tasks:
+
+    - name: install the latest version of Apache
+      yum:
+        name: tree
+        state: latest
