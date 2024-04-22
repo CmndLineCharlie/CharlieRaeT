@@ -1,0 +1,22 @@
+---
+- name: JoannaCopy and Archive Playbook
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Copy files to home directory
+      copy:
+        src: /tmp/myinfo
+        dest: /home/CharlieRaeT/testfile
+        owner: root
+        group: Powerball
+        mode: '0644'
+      tags: 
+        - copy
+
+    - name: Archive copied files
+      archive:
+        path: /tmp/File.txt.tar.gz
+        dest: /home/CharlieRaeT/testfile
+        format: gz
+      tags:
+        - archive
