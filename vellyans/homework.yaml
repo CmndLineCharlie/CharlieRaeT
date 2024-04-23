@@ -1,0 +1,19 @@
+---
+
+- name: archives and copying playbook
+  gather_facts: false
+  hosts: all
+  tasks:
+
+    - name: copy file to remote host
+      copy:
+        src: /etc/resolv.conf
+        dest: /opt/hibachi/50thfloor
+        owner: root
+        group: root
+
+    - name: archive the copied file
+      archive:
+        path: /var/log/dmesg
+        dest: /opt/hibachi/dmesg.zip
+        format: zip
