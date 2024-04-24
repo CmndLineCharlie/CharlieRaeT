@@ -1,0 +1,19 @@
+---
+
+- name: Ansible HW Playbook 
+  gather_facts: true
+  hosts: all
+  tasks:
+
+    - name: copy NIC file to opt directory and rename HWFile
+      copy:
+        src: /etc/sysconfig/network-scripts/ifcfg-ens160 
+        dest: /opt/HWFile
+        owner: root
+        group: root
+
+    - name: archive and compress /var/log/messages into /var/log/messages.secure.tar.gz
+      archive:
+        path: /var/log/messages
+        dest: /var/log/messages.secure.tar.gz
+        format: gz
