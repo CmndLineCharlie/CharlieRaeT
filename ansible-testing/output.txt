@@ -1,0 +1,2 @@
+10.1.18.196 | FAILED | rc=2 >>
+[Errno 2] No such file or directory: b'adhoc': b'adhoc'
