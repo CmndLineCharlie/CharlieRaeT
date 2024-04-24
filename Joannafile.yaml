@@ -1,7 +1,10 @@
 ---
+
 - name: JoannaCopy and Archive Playbook
   hosts: localhost
   gather_facts: false
+  vars:
+    mave: "John"  # Define the variable mave
   tasks:
     - name: Copy files to home directory
       copy:
@@ -10,7 +13,7 @@
         owner: root
         group: Powerball
         mode: '0644'
-      tags: 
+      tags:
         - copy
 
     - name: Archive copied files
@@ -18,5 +21,29 @@
         path: /tmp/File.txt.tar.gz
         dest: /home/CharlieRaeT/testfile
         format: gz
+
+    - name: Testing the debug module
+      debug:
+        msg: "Me {{ mave }} cut the debug module"
+
+    - name: Testing the debug module while using a tag
+      debug:
+        msg: "Me {{ mave }} cut the debug module"
       tags:
-        - archive
+        - fancytag
+
+    - name: Copy files to home directory using with items
+      copy:
+        src: "{{ item }}"
+        dest: /home/CharlieRaeT/testfile
+        owner: root
+        group: Powerball
+        mode: '0644'
+      with_items:
+        - /etc/passwd
+        - /etc/group
+
+    - name: Install nfs-utils package
+      yum:
+        name: nfs-utils
+        state: present
