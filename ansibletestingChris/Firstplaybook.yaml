@@ -1,0 +1,18 @@
+---
+- name: My First playbook 
+  gather_facts: false
+  hosts: Chris
+  tasks:
+
+    - name: Copy file or template from https://kodekloud.com/blog/ansible-copy/
+      copy:
+        src: /var/log/secure
+        dest: /root/Chris
+
+    - name: Compress directory /root/Documents into /root/Chris2.gz
+      archive:
+        path: /root/Documents
+        dest: /root/Chris2.gz
+
+  
+

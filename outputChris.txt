@@ -1,0 +1,39 @@
+192.168.1.222 | CHANGED | rc=0 >>
+NAME                          MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                             8:0    0   12G  0 disk 
+├─sda1                          8:1    0    1G  0 part /boot
+└─sda2                          8:2    0   11G  0 part 
+  ├─centos_chris-root         253:0    0  9.8G  0 lvm  /
+  └─centos_chris-swap         253:1    0  1.2G  0 lvm  [SWAP]
+sdb                             8:16   0    6G  0 disk 
+└─sdb1                          8:17   0    5G  0 part 
+sdc                             8:32   0   10G  0 disk 
+└─sdc1                          8:33   0  4.7G  0 part 
+  └─classVG-classLV           253:4    0  4.7G  0 lvm  /var/log
+sdd                             8:48   0  5.8G  0 disk 
+└─sdd1                          8:49   0    3G  0 part 
+  └─VGsdd1-LVsdd1             253:3    0  6.3G  0 lvm  /u01
+sde                             8:64   0  3.3G  0 disk 
+└─VGsdd1-LVsdd1               253:3    0  6.3G  0 lvm  /u01
+sdf                             8:80   0    7G  0 disk 
+└─sdf1                          8:81   0    5G  0 part 
+sdg                             8:96   0    5G  0 disk 
+└─sdg1                          8:97   0    3G  0 part 
+  └─AprilThirdVG-BackintheBay 253:2    0  4.5G  0 lvm  /U02
+sdh                             8:112  0    2G  0 disk 
+└─AprilThirdVG-BackintheBay   253:2    0  4.5G  0 lvm  /U02
+sr0                            11:0    1  4.4G  0 rom  
+192.168.1.118 | CHANGED | rc=0 >>
+NAME                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                   8:0    0   10G  0 disk 
+├─sda1                8:1    0    1G  0 part /boot
+└─sda2                8:2    0    9G  0 part 
+  ├─centos-root     253:0    0    8G  0 lvm  /
+  └─centos-swap     253:1    0    1G  0 lvm  [SWAP]
+sdb                   8:16   0   10G  0 disk 
+└─sdb1                8:17   0    3G  0 part 
+  └─foldVG-fold2LV  253:2    0    3G  0 lvm  /fold1/fold2
+sdc                   8:32   0   10G  0 disk 
+└─sdc1                8:33   0    3G  0 part 
+  └─fold2VG-fold3LV 253:3    0    3G  0 lvm  /fold1/fold2/fold3
+sr0                  11:0    1  4.4G  0 rom  
