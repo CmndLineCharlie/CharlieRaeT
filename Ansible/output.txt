@@ -1,0 +1,10 @@
+server1 | CHANGED | rc=0 >>
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 903M     0  903M   0% /dev
+tmpfs                    920M     0  920M   0% /dev/shm
+tmpfs                    920M  9.5M  910M   2% /run
+tmpfs                    920M     0  920M   0% /sys/fs/cgroup
+/dev/mapper/centos-root  9.8G  5.0G  4.9G  51% /
+/dev/sda1               1014M  187M  828M  19% /boot
+tmpfs                    184M  8.0K  184M   1% /run/user/42
+tmpfs                    184M     0  184M   0% /run/user/0
